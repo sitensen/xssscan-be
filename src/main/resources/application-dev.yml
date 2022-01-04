@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    driverName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://101.43.151.105:3306/codesScan?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: Root1234
+  redis:
+    host: 101.43.151.105 # Redis服务器地址
+    database: 0 # Redis数据库索引（默认为0）
+    port: 6379 # Redis服务器连接端口
+    password: Root1234 # Redis服务器连接密码（默认为空）
+    timeout: 3000ms # 连接超时时间（毫秒）
+
+logging:
+  level:
+    root: info
+    com.hongtech.admin: debug
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+minio:
+  server: http://101.43.151.105:9000
+  accessKey: admin
+  secretKey: password
+
+zip:
+  filepath: /home/ubuntu/localfile
